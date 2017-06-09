@@ -1,0 +1,16 @@
+Java开发过程中会出现多的乱码的问题，问题的源于编码方式的不同造成的
+
+//原则1、
+开发过程中中文乱码请使用UTF-8的编码方式
+
+
+//****问题汇总
+
+// 问题1、 在eclipse等工具中保存数据库一切正常，导出到jar/runnable jar 批处理时保存出现中文乱码情况
+ 问题定位：1) 您获取到的字编码是否正常请检查 --具体问题之后将
+	   2）执行过程中出现乱码该如何解决
+	  增加“-Dfile.encoding=utf-8”
+		@echo off       
+
+		java -Dfile.encoding=utf-8 -jar footSysSync.jar
+		@pause
